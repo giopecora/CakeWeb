@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.senac.tads.cakeweb;
+package servlets;
 
+import classes.Produtos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -18,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author giovane.gpecora1
  */
-
 public class TelaInicial extends HttpServlet {
 
     /**
@@ -32,10 +32,9 @@ public class TelaInicial extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/JSP/TelaInicial.jsp");
-        rd.forward(request,response);
-        
+        rd.forward(request, response);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -50,6 +49,13 @@ public class TelaInicial extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        Produtos produtos = new Produtos("CupCake", "Bolo pequeno projetado para uma pessoa", "./imagens/CupCake.jpg", 0);
+        
+        String data = "Hello World!";
+        response.setContentType("text/plain");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(produtos.getImagem());
         processRequest(request, response);
     }
 
@@ -64,6 +70,8 @@ public class TelaInicial extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+   
         processRequest(request, response);
     }
 

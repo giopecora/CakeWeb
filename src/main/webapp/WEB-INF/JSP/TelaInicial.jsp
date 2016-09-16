@@ -9,9 +9,13 @@
 <html>
     <head>
         <title>Cake Web</title>
-        <link type="text/css" rel="stylesheet" href="estilo/CakeWeb.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="estilo/CakeWeb.css">
         <link type="text/css" rel="stylesheet" href="Frameworks/Bootstrap/css/bootstrap.min.css">
+        <script type="text/javascript" src="Frameworks/Bootstrap/js/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="JS/CakeWeb.js"></script>
+        <script type="text/javascript" src="Angular/js/angular/angular.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -164,10 +168,6 @@
 
 
             </div>
-            <script type="text/javascript" src="Frameworks/Bootstrap/js/jquery-3.1.0.min.js"></script>
-            <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="CakeWeb.js"></script>
-            <script type="text/javascript" src="Angular/js/angular/angular.min.js"></script>
 
         </div>
 

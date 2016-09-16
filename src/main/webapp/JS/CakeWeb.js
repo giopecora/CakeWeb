@@ -4,6 +4,11 @@ var descricoes = ["Bolo pequeno projetado para uma pessoa","Torta de Palmito, se
 var contImg = 0;
 
 $(document).ready(function (){
+    
+    $.get('TelaInicial', function(data) {
+        alert(data);
+    });
+    
     $("#CupCake").attr("src",imagens[contImg]);
 
     $("#setaDireita").click(function(){

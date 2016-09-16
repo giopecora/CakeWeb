@@ -1,5 +1,5 @@
 
-package br.senac.tads.cakeweb;
+package classes;
 
 public class Produtos {
     private String titulo;
