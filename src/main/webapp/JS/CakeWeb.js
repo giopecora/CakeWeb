@@ -5,20 +5,20 @@ var contImg = 0;
 
 
 /*$(document).ready(function () {
-    var name = $('#userName').val();
-    $.get('GetUserServlet', function (responseText) {
-        $('#ajaxGetUserServletResponse').text(responseText);
-    });
-
-});*/
+ var name = $('#userName').val();
+ $.get('GetUserServlet', function (responseText) {
+ $('#ajaxGetUserServletResponse').text(responseText);
+ });
+ 
+ });*/
 
 $(document).ready(function () {
-    
+
     $.get('TelaInicialProdutos', function (imagem) {
-        $("#CupCake").attr("src", imagem);
+        $("#CupCake").attr("src", imagem.Produto.Imagem);
     });
 
-    
+
 
     $("#setaDireita").click(function () {
         if (contImg === 3) {
