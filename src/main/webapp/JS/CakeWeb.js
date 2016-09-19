@@ -14,8 +14,8 @@ var contImg = 0;
 
 $(document).ready(function () {
 
-    $.get('TelaInicialProdutos', function (imagem) {
-        $("#CupCake").attr("src", imagem.Produto.Imagem);
+    $.get('TelaInicialProdutos', function (json) {
+        $("#CupCake").attr("src", json.Produto.Imagem);
     });
 
 

@@ -45,17 +45,9 @@ public class TelaInicialProdutos extends HttpServlet {
         jsonProdutos.put("Descrição", p.getDescricao());
         jsonProdutos.put("Titulo", p.getTitulo());
         arrayProdutos.put(jsonProdutos);
-        
         json.put("Produto", jsonProdutos);
-        
         response.setContentType("application/json");
-        String teste = json.toString();
         response.getWriter().write(json.toString());
-
-        /*Produtos p = new Produtos("CupCake", "Bolo pequeno projetado para uma pessoa", "./imagens/CupCake.jpg", 0);
-        response.setContentType("text/plain");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(p.getImagem());*/
 
     }
 
