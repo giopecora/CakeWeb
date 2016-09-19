@@ -4,9 +4,17 @@
         <servlet-name>TelaInicial</servlet-name>
         <servlet-class>servlets.TelaInicial</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TelaInicialProdutos</servlet-name>
+        <servlet-class>servlets.TelaInicialProdutos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TelaInicial</servlet-name>
         <url-pattern>/TelaInicial</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TelaInicialProdutos</servlet-name>
+        <url-pattern>/TelaInicialProdutos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
