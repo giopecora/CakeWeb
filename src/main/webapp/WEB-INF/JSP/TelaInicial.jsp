@@ -89,8 +89,8 @@
                      col-sm-12 col-sm-offset-2
                      col-md-4  col-md-offset-4 
                      col-md-3  col-md-offset-4 ">
-                    <h3 id="tituloImg" class="text-center">CupCake</h3>
-                    <p id="descricaoImg"class="text-center">Bolo pequeno projetado para uma pessoa</p>
+                    <h3 id="tituloImg" class="text-center"></h3>
+                    <p id="descricaoImg"class="text-center"></p>
                 </div>
 
             </div>

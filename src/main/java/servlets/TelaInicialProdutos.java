@@ -24,28 +24,20 @@ public class TelaInicialProdutos extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        
-        /*Array de objetos JSONObject*/
         JSONArray arrayProdutos = new JSONArray();
-        
-        /*Objeto referente a um produto*/
-        JSONObject jsonProdutos = new JSONObject();;
-        
-        /*O objeto json em que o indice será 
-        Produto: 
-        E o conteudo será um json que estava na array*/
         JSONObject json = new JSONObject();
-        
-              
-        
+
         Produtos p = new Produtos("CupCake", "Bolo pequeno projetado para uma pessoa", "./imagens/CupCake.jpg", 0);
-        
-        jsonProdutos.put("Imagem", p.getImagem());
-        jsonProdutos.put("Descrição", p.getDescricao());
-        jsonProdutos.put("Titulo", p.getTitulo());
-        arrayProdutos.put(jsonProdutos);
-        json.put("Produto", jsonProdutos);
+        arrayProdutos.put(preencheJson(p));
+        Produtos p2 = new Produtos("Torta", "Torta de Palmito, serve 10 pessoas", "./imagens/Torta.jpg", 0);
+        arrayProdutos.put(preencheJson(p2));
+        Produtos p3 = new Produtos("Beijinho", "Beijinho com leite condensado importado", "./imagens/beijinho.jpg", 0);
+        arrayProdutos.put(preencheJson(p3));
+        Produtos p4 = new Produtos("Brigadeiro", "Brigadeiro com chocolate Belga", "./imagens/brigadeiro.jpg", 0);
+        arrayProdutos.put(preencheJson(p4));
+
+        json.put("Produtos", arrayProdutos);
+        String teste = json.toString();
         response.setContentType("application/json");
         response.getWriter().write(json.toString());
 
@@ -62,5 +54,13 @@ public class TelaInicialProdutos extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-}
+    public JSONObject preencheJson(Produtos p) {
+        JSONObject jsonProdutos = new JSONObject();
+        jsonProdutos.put("Imagem", p.getImagem());
+        jsonProdutos.put("Descricao", p.getDescricao());
+        jsonProdutos.put("Titulo", p.getTitulo());
+        return jsonProdutos;
 
+    }
+
+}

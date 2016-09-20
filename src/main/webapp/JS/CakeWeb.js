@@ -1,24 +1,12 @@
-var imagens = ["./imagens/CupCake.jpg", "./imagens/Torta.jpg", "./imagens/beijinho.jpg", "./imagens/brigadeiro.jpg"];
-var titulos = ["CupCake", "Torta", "Beijinho", "Brigadeiro"];
-var descricoes = ["Bolo pequeno projetado para uma pessoa", "Torta de Palmito, serve 10 pessoas", "Brigadeiro com chocolate Belga", "Beijinho com leite condensado importado"];
 var contImg = 0;
-
-
-/*$(document).ready(function () {
- var name = $('#userName').val();
- $.get('GetUserServlet', function (responseText) {
- $('#ajaxGetUserServletResponse').text(responseText);
- });
- 
- });*/
 
 $(document).ready(function () {
 
     $.get('TelaInicialProdutos', function (json) {
-        $("#CupCake").attr("src", json.Produto.Imagem);
+        $("#CupCake").attr("src", json.Produtos[0].Imagem);
+        $("#tituloImg").text(json.Produtos[0].Titulo);
+        $("#descricaoImg").text(json.Produtos[0].Descricao);
     });
-
-
 
     $("#setaDireita").click(function () {
         if (contImg === 3) {
@@ -40,7 +28,10 @@ $(document).ready(function () {
 });
 
 function trocarValoresProd() {
-    $("#CupCake").attr("src", imagens[contImg]);
-    $("#tituloImg").text(titulos[contImg]);
-    $("#descricaoImg").text(descricoes[contImg]);
+    $.get('TelaInicialProdutos', function (json) {
+        $("#CupCake").attr("src", json.Produtos[contImg].Imagem);
+        $("#tituloImg").text(json.Produtos[contImg].Titulo);
+        $("#descricaoImg").text(json.Produtos[contImg].Descricao);
+
+    });
 }
