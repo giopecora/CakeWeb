@@ -10,12 +10,28 @@
     <head>
         <title>Cake Web</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="estilo/CakeWeb.css">
-        <link type="text/css" rel="stylesheet" href="Frameworks/Bootstrap/css/bootstrap.min.css">
+        
+        <!-- jQuery-->
         <script type="text/javascript" src="Frameworks/Bootstrap/js/jquery-3.1.0.min.js"></script>
-        <script type="text/javascript" src="Frameworks/Bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="JS/CakeWeb.js"></script>
-        <script type="text/javascript" src="Frameworks/Angular/angular/angular.min.js"></script>
+        
+        <!-- Bootstrap-->
+            <!-- CSS-->
+            <link type="text/css" rel="stylesheet" href="Frameworks/Bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="Frameworks/bootstrap-submenu-2.0.4/dist/css/bootstrap-submenu.min.css">
+            <!-- JavaScript-->
+            <script type="text/javascript" src="Frameworks/Bootstrap/js/bootstrap.min.js"></script>
+            <script src="Frameworks/bootstrap-submenu-2.0.4/dist/js/bootstrap-submenu.min.js" defer></script>
+
+        <!-- Pessoal-->
+            <!-- Css-->
+            <link type="text/css" rel="stylesheet" href="estilo/CakeWeb.css">
+        
+            <!-- JavaScript-->
+            <script type="text/javascript" src="JS/CakeWeb.js"></script>
+
+        
+
     </head>
     <body>
         <div class="container">
@@ -38,7 +54,58 @@
                         <div class="collapse navbar-collapse" 
                              id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav ">
-                                <li><a href="#">Produtos</a></li>
+                                <li class="dropdown">
+                                    <a href="#" 
+                                       data-submenu="" 
+                                       data-toggle="dropdown" 
+                                       tabindex="0" 
+                                       aria-expanded="true"> Produtos 
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Incluir</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Excluir</a></li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-submenu ">
+                                            <a href="#" 
+                                               tabindex="0"
+                                               class="dropdown-toggle" 
+                                               data-toggle="dropdown">Buscar</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <form class="navbar-form navbar-left" role="search">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Código">
+                                                        </div>
+                                                        <br/>
+                                                        <button type="submit" class="btn btn-   default">Procurar</button>
+                                                    </form>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Busca Avançada</a></li>
+                                            </ul>
+                                        </li>
+                                     </ul>
+                                </li>
+                                        
+
+                                        <!--<li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Buscar<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <form class="navbar-form navbar-left" role="search">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Search">
+                                                        </div>
+                                                        <button type="submit" class="btn btn-   default">Submit</button>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>-->
+                                   
+
+
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Carrinho de Compra</a></li>
                                 <li><a href="#">Quem Somos</a></li>
@@ -46,6 +113,7 @@
                         </div><!-- /.navbar-collapse-->
                     </div><!-- /.container-fluid-->
                 </nav> 
+
                 <div class="col-md-4 col-md-offset-4"   id="logo">   
                     <img src="imagens/logo.png"/>
                 </div>

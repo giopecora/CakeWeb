@@ -7,6 +7,7 @@ $(document).ready(function () {
         $("#tituloImg").text(json.Produtos[0].Titulo);
         $("#descricaoImg").text(json.Produtos[0].Descricao);
     });
+    $('[data-submenu]').submenupicker();
 
     $("#setaDireita").click(function () {
         if (contImg === 3) {
