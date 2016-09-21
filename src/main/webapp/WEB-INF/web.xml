@@ -8,6 +8,10 @@
         <servlet-name>TelaInicialProdutos</servlet-name>
         <servlet-class>servlets.TelaInicialProdutos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IncluirProduto</servlet-name>
+        <servlet-class>servlets.IncluirProduto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TelaInicial</servlet-name>
         <url-pattern>/TelaInicial</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>TelaInicialProdutos</servlet-name>
         <url-pattern>/TelaInicialProdutos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IncluirProduto</servlet-name>
+        <url-pattern>/IncluirProduto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
