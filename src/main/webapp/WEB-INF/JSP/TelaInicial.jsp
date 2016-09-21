@@ -13,9 +13,9 @@
         <link type="text/css" rel="stylesheet" href="estilo/CakeWeb.css">
         <link type="text/css" rel="stylesheet" href="Frameworks/Bootstrap/css/bootstrap.min.css">
         <script type="text/javascript" src="Frameworks/Bootstrap/js/jquery-3.1.0.min.js"></script>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="Frameworks/Bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="JS/CakeWeb.js"></script>
-        <script type="text/javascript" src="Angular/js/angular/angular.min.js"></script>
+        <script type="text/javascript" src="Frameworks/Angular/angular/angular.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -89,8 +89,8 @@
                      col-sm-12 col-sm-offset-2
                      col-md-4  col-md-offset-4 
                      col-md-3  col-md-offset-4 ">
-                    <h3 id="tituloImg" class="text-center"></h3>
-                    <p id="descricaoImg"class="text-center"></p>
+                    <h3 id="tituloImg" class="text-center">CupCake</h3>
+                    <p id="descricaoImg"class="text-center">Bolo pequeno projetado para uma pessoa</p>
                 </div>
 
             </div>
@@ -170,6 +170,5 @@
             </div>
 
         </div>
-
     </body>
 </html>
