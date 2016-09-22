@@ -32,5 +32,26 @@
             <div class="row" id="cabecalho">
                 <jsp:include page="menu.jsp"></jsp:include> 
             </div>
+        
+            <div class="row" id="produtos">
+                <form>
+                    <div class="form-group col-sm-12">
+                        <label for="titulo">Produto Titulo</label>
+                        <input type="text" class="form-control"  placeholder="Informe um titulo" required>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label for="descricao">Descrição do Produto</label>
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label for="imagemProduto" required>Imagem Produto</label>
+                        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
