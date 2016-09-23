@@ -36,7 +36,7 @@
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="${i}" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     </ol>
 
                     <!-- Wrapper for slides -->
