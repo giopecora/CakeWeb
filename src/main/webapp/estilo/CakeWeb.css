@@ -35,9 +35,10 @@
 /************************** FECHA SOBRE *********************************************/
 
 @media screen and (min-width: 992px) {
-    #CupCake{
+    #CupCake, .imgProduto{
          margin-top:10px;
          height: 300px;
+         width: 300px;
     }
     .seta{
         margin-top:130px;
@@ -49,7 +50,7 @@
 @media screen and 
 (min-width: 200px) and 
     (max-width: 640px){
-        #CupCake{
+        #CupCake , .imgProduto{
             margin-top:10px;
             height: 100px;
             width: 150px;
